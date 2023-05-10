@@ -1,0 +1,14 @@
+server:
+  port: 8801
+spring:
+  application:
+    name: configuration
+  cloud:
+    nacos:
+      server-addr: native.virtual.com:8848
+      config:
+        server-addr: ${spring.cloud.nacos.server-addr}
+        namespace: learn-${spring.profiles.active}
+  config:
+    import:
+      - optional:nacos:${spring.application.name}.yml?refreshEnabled=true&group=DEFAULT_GROUP

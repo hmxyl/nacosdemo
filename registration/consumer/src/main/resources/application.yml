@@ -1,0 +1,13 @@
+server:
+  port: 8101
+spring:
+  application:
+    name: consumer
+  cloud:
+    nacos:
+      server-addr: native.virtual.com:8848
+      discovery:
+        server-addr: ${spring.cloud.nacos.server-addr}
+        namespace: learn-${spring.profiles.active}
+service-url:
+  nacos-user-service: http://producer

@@ -1,0 +1,13 @@
+server:
+  port: 8802
+spring:
+  application:
+    name: configuration_old
+  cloud:
+    nacos:
+      config:
+        server-addr: native.virtual.com:8848
+        namespace: learn-${spring.profiles.active}
+        group: DEFAULT_GROUP
+        name: configuration.yml
+        file-extension: yml

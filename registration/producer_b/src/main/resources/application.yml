@@ -1,0 +1,11 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: producer
+  cloud:
+    nacos:
+      server-addr: native.virtual.com:8848
+      discovery:
+        server-addr: ${spring.cloud.nacos.server-addr}
+        namespace: learn-${spring.profiles.active}
