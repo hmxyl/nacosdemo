@@ -11,3 +11,9 @@ spring:
         group: DEFAULT_GROUP
         name: configuration.yml
         file-extension: yml
+        extension-configs[0]:
+          data-id: text.yml
+          refresh: true
+        extension-configs[1]:
+          data-id: code.yml
+          refresh: true

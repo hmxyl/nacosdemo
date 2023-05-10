@@ -13,4 +13,6 @@ public class ConfigInfo {
     private String text;
     @Value("${config.code}")
     private String code;
+    @Value("${config.message}")
+    private String message;
 }

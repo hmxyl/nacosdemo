@@ -12,3 +12,5 @@ spring:
   config:
     import:
       - optional:nacos:${spring.application.name}.yml?refreshEnabled=true&group=DEFAULT_GROUP
+      - optional:nacos:text.yml?refreshEnabled=true&group=DEFAULT_GROUP
+      - optional:nacos:code.yml?refreshEnabled=true&group=DEFAULT_GROUP
