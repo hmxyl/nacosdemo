@@ -9,5 +9,6 @@ spring:
       discovery:
         server-addr: ${spring.cloud.nacos.server-addr}
         namespace: learn-${spring.profiles.active}
+        register-enabled: false
 service-url:
   nacos-user-service: http://producer
